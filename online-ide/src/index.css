@@ -1,0 +1,126 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87); */ /* Overridden by layout CSS */
+  /* background-color: #242424; */ /* Overridden by layout CSS */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* body { */ /* Replaced by new body, #root styling */
+  /* margin: 0; */
+  /* display: flex; */ /* This might conflict, ensure layout CSS takes precedence */
+  /* place-items: center; */
+  /* min-width: 320px; */
+  /* min-height: 100vh; */
+/* } */
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* color: #213547; */ /* Overridden by layout CSS */
+    /* background-color: #ffffff; */ /* Overridden by layout CSS */
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Layout CSS from subtask description */
+body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif; /* Overrides :root font-family for now, can be merged later */
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.file-explorer-panel {
+  width: 200px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  color: #333; /* Ensure text is visible on light background */
+}
+
+.main-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-editor-panel {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 10px;
+  color: #333; /* Ensure text is visible on light background */
+}
+
+.terminal-panel {
+  height: 200px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.ai-assistant-panel {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-left: 1px solid #ccc;
+  color: #333; /* Ensure text is visible on light background */
+}
+
+/* Basic panel styling for visibility */
+.file-explorer-panel, .code-editor-panel, .terminal-panel, .ai-assistant-panel {
+  border: 1px dashed #999; /* Temporary borders */
+  box-sizing: border-box; /* Ensure padding and border are within width/height */
+}
